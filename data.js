@@ -370,6 +370,8 @@ const STARTUP = {
     {
       title: '品牌与账号', note: '建立小红书、抖音与公众号矩阵，统一品牌视觉与内容表达',
       photos: [
+        { file: 'assets/startup/startup-38.jpg', cap: '线下门店 1' },
+        { file: 'assets/startup/startup-39.jpg', cap: '线下门店 2' },
         { file: 'assets/startup/startup-29.jpg', cap: '合作企业' },
         { file: 'assets/startup/startup-33.jpg', cap: '跳蚤市场' },
         { file: 'assets/startup/startup-01.jpg', cap: '小红书主页' },
@@ -536,5 +538,4 @@ const SKILLS = [
 ];
 
 const SKILLS_INTRO = '在百度实习期间，我把内容生产拆成「热点抓取→选题筛选→文案写作→配图生成→排版发布」五段，自主开发并迭代了 10+ 个 Skill，AI 化率 80%、单篇耗时下降 60%。下面 3 个可以直接在页面里试玩，其余几个做成可下载的完整包。';
-
 
