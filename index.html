@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周旺 Ivy · 产品经理</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 背景装饰色团 -->
+<div class="blobs" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+</div>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">Ivy<span class="dot"></span><span class="sticker-ico sm" data-sticker="star" aria-hidden="true"></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">关于我</a>
+      <a href="#traits">特质</a>
+      <a href="#cards">扭蛋机</a>
+      <a href="#experience">经历</a>
+      <a href="#campus">校园</a>
+      <a href="#roles">校园经历</a>
+      <a href="#honors">荣誉证书</a>
+      <a href="#works">作品</a>
+      <a href="#startup">创业</a>
+      <a href="#skillpack">技能包</a>
+      <a href="#life">生活</a>
+      <a href="#contact">联系</a>
+      <a class="nav-resume" href="周旺-产品经理-简历.pdf" download>简历 ⬇</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="live"></span>HELLO / 你好 · 周旺 Ivy · 求职方向：产品 / 运营 / 市场</p>
+        <h1>嗨，我是 <span class="hl em">周旺 Ivy</span><br>一个善用<span class="hl pink">工具</span>、<br>习惯从数据里找<span class="hl pink">答案</span>的人</h1>
+        <p class="lead">湖南第一师范学院市场营销专业，GPA 3.79、专业排名前 1%。在百度 MEG 将内容生产流程拆解为五段链路并搭建 10+ 个 Skill，实现 80% AI 化率、单篇耗时降低 60%；独立运营 3 个 To B 账号，零预算累计增粉 2000+；参与校园文创项目从公司注册到商业模式验证的完整过程。具备产品、运营与市场方向的复合实践能力。</p>
+        <div class="chips hero-chips">
+          <span>需求调研</span><span>内容运营</span><span>用户增长</span><span>数据分析</span><span>GTM 与活动</span><span>AI Agent 搭建</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#works">看我做过的项目 →</a>
+          <a class="btn btn-ghost" href="#cards">来扭一颗认识我 🎀</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>80%</strong><span>内容生产 AI 化率</span></li>
+          <li><strong>2000+</strong><span>0 预算涨粉</span></li>
+          <li><strong>3.79</strong><span>GPA · 专业前 1%</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <span class="disc" aria-hidden="true"></span>
+        <span class="sticker s1">HIRE<br>ME!</span>
+        <span class="float-st f1" data-sticker="star" aria-hidden="true"></span>
+        <span class="float-st f2" data-sticker="heart" aria-hidden="true"></span>
+        <span class="float-st f3" data-sticker="cloud" aria-hidden="true"></span>
+        <figure class="cutout">
+          <img src="照片/个人照-抠图.png"
+               srcset="照片/个人照-抠图@900.png 900w, 照片/个人照-抠图.png 1500w"
+               sizes="(max-width: 900px) 88vw, 46vw"
+               alt="周旺的个人照片">
+        </figure>
+        <div class="now-card">
+          <span class="now-label">NOW</span>
+          <strong id="nowTitle"></strong>
+          <span class="d" id="nowDesc"></span>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#about">继续下滑，认识我 <i aria-hidden="true">↓</i></a>
+  </section>
+
+  <!-- ===== 跑马灯 ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>AI Agent 搭建 <i>✦</i> 竞品监测 <i>✦</i> To B 内容运营 <i>✦</i> 专家访谈 SOP <i>✦</i> 数据看板 <i>✦</i> GTM <i>✦</i> 跨境电商 <i>✦</i> 私域增长 <i>✦</i> 线下快闪 <i>✦</i></span>
+      <span>AI Agent 搭建 <i>✦</i> 竞品监测 <i>✦</i> To B 内容运营 <i>✦</i> 专家访谈 SOP <i>✦</i> 数据看板 <i>✦</i> GTM <i>✦</i> 跨境电商 <i>✦</i> 私域增长 <i>✦</i> 线下快闪 <i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- ===== 关于我：身份信息 + 自我评价 + 优势 ===== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">01 / ABOUT</span>
+        <h2><span class="sticker-ico" data-sticker="heart" aria-hidden="true"></span>关于我</h2>
+        <p class="sec-sub">2027 届 · 产品 / 运营 / 市场 · 北京 上海 杭州 长沙 深圳</p>
+      </div>
+
+      <h3 class="sub-title"><span class="bar"></span>身份信息</h3>
+      <ul class="id-grid" id="idGrid"></ul>
+
+      <h3 class="sub-title"><span class="bar pink"></span>自我评价</h3>
+      <div class="eval-grid">
+        <article class="card eval-card">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <p class="quote" id="evalQuote"></p>
+          <ul class="kw" id="evalKw"></ul>
+        </article>
+        <article class="card eval-body" id="evalBody"></article>
+      </div>
+
+      <h3 class="sub-title"><span class="bar mint"></span>核心能力</h3>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="sticker-ico sm corner" data-sticker="star" aria-hidden="true"></span>
+          <div class="card-emoji" aria-hidden="true">✨</div>
+          <span class="tag">善用工具</span>
+          <h3>把人工活做成工具</h3>
+          <p>内容生产、竞品追踪、专家访谈这三件重复的人工活，分别做成了 Agent、数据看板和 SOP，并持续迭代。</p>
+        </article>
+        <article class="card">
+          <div class="card-emoji" aria-hidden="true">🧩</div>
+          <span class="tag">数据找答案</span>
+          <h3>指标体系 + 复盘归因</h3>
+          <p>先定义指标再动手：账号做 24h／3 日／7 日三段式复盘，竞品做声量看板，用数据定位机会点、判断需求优先级。</p>
+        </article>
+        <article class="card">
+          <div class="card-emoji" aria-hidden="true">🚀</div>
+          <span class="tag">方向</span>
+          <h3>产品 / 运营 / 市场</h3>
+          <p>三个方向都实操过：产品侧做 Agent 提效，运营侧 0 预算起号，市场侧管投放与数据。2027 届，目前可长期实习。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 个人特质：横向拖拽长廊 ===== -->
+  <section class="section traits-sec" id="traits">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">02 / TRAITS</span>
+        <h2><span class="sticker-ico" data-sticker="spark" aria-hidden="true"></span>个人特质</h2>
+        <p class="sec-sub" id="traitsIntro"></p>
+      </div>
+    </div>
+    <div class="rail" id="traitRail" tabindex="0" aria-label="个人特质长廊，可左右拖动">
+      <div class="rail-track" id="traitTrack"></div>
+    </div>
+    <div class="wrap rail-foot">
+      <div class="rail-bar"><span id="railFill"></span></div>
+      <span class="rail-hint">拖动 · 或按 ← → 键</span>
+    </div>
+  </section>
+
+  <!-- ===== 灵魂扭蛋机 ===== -->
+  <section class="section alt" id="cards">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">03 / GACHA</span>
+        <h2><span class="sticker-ico" data-sticker="star" aria-hidden="true"></span>灵魂扭蛋机</h2>
+        <p class="sec-sub">通过技能与兴趣卡片，呈现专业能力、实践经验与个人兴趣</p>
+      </div>
+
+      <div class="gacha">
+        <div class="gacha-left">
+          <div class="tabs" id="gachaTabs">
+            <button class="chip-btn is-on" data-deck="skill">技能蛋 🥚</button>
+            <button class="chip-btn" data-deck="interest">兴趣蛋 🎀</button>
+          </div>
+          <div class="deck" id="deck" role="button" tabindex="0" aria-label="扭一颗蛋">
+            <span class="deck-back b3"></span>
+            <span class="deck-back b2"></span>
+            <span class="deck-back b1">
+              <span class="sticker-ico deck-ico" data-sticker="star" aria-hidden="true"></span>
+              <span class="deck-txt">投币，扭一下 →</span>
+            </span>
+          </div>
+          <div class="deck-bar">
+            <div class="progress"><span id="progressFill"></span></div>
+            <span class="progress-txt" id="progressTxt">0 / 0</span>
+          </div>
+          <button class="btn btn-ghost small" id="resetDeck">换一箱蛋 ↺</button>
+        </div>
+
+        <div class="gacha-right">
+          <div class="drawn-grid" id="drawnGrid">
+            <p class="empty-hint ph">扭蛋槽还是空的，左边那颗蛋等你 👈</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="paw-divider" aria-hidden="true">🐾</div>
+
+      <h3 class="sub-title"><span class="bar"></span>常用工具</h3>
+      <div class="tool-groups" id="toolChips"></div>
+    </div>
+  </section>
+
+  <!-- ===== 实习经历时间轴 ===== -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">04 / EXPERIENCE</span>
+        <h2><span class="sticker-ico" data-sticker="note" aria-hidden="true"></span>实习与工作经历</h2>
+        <p class="sec-sub">百度 · 安克创新 · 校园文创创业</p>
+      </div>
+      <ol class="timeline" id="expTimeline"></ol>
+    </div>
+  </section>
+  <!-- ===== 我的大学 ===== -->
+  <section class="section alt-mint" id="campus">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">05 / CAMPUS</span>
+        <h2><span class="sticker-ico" data-sticker="cloud" aria-hidden="true"></span>我的大学</h2>
+        <p class="sec-sub">市场营销主修与数智营销微专业并行，形成市场洞察与数据能力的双重基础</p>
+      </div>
+      <div class="campus-grid">
+        <article class="card campus-info">
+          <span class="sticker-ico sm corner" data-sticker="spark" aria-hidden="true"></span>
+          <span class="sticker s3">CLASS OF 2026</span>
+          <h3 id="uniName"></h3>
+          <p class="uni-major" id="uniMajor"></p>
+          <p class="ph" id="uniDesc"></p>
+          <div class="chips wrap-chips" id="uniTags"></div>
+          <ul class="uni-stats" id="uniStats"></ul>
+        </article>
+        <div class="photo-collage" id="uniPhotos"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 校园经历 ===== -->
+  <section class="section" id="roles">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">06 / CAMPUS LIFE</span>
+        <h2><span class="sticker-ico" data-sticker="star" aria-hidden="true"></span>校园经历</h2>
+        <p class="sec-sub">学生工作与校园组织经历，持续锻炼统筹、沟通与项目执行能力</p>
+      </div>
+      <div class="role-groups" id="roleGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== 经历与荣誉 ===== -->
+  <section class="section" id="honors">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">07 / HONORS</span>
+        <h2><span class="sticker-ico" data-sticker="flower" aria-hidden="true"></span>荣誉与证书</h2>
+      </div>
+      <div class="cert-summary" id="certSummary"></div>
+      <div class="cert-wall is-clamped" id="certGrid"></div>
+      <div class="cert-more"><button class="btn btn-ghost small" id="certMore">展开全部证书 ↓</button></div>
+    </div>
+  </section>
+
+  <!-- ===== 作品集 ===== -->
+  <section class="section alt" id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">08 / PORTFOLIO</span>
+        <h2><span class="sticker-ico" data-sticker="spark" aria-hidden="true"></span>作品集</h2>
+        <p class="sec-sub">六项核心实践项目，以业务过程和可验证结果呈现个人能力</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="chip-btn is-on" data-f="all">全部</button>
+        <button class="chip-btn" data-f="agent">AI / 工具</button>
+        <button class="chip-btn" data-f="ops">内容运营</button>
+        <button class="chip-btn" data-f="research">调研洞察</button>
+        <button class="chip-btn" data-f="biz">商业增长</button>
+      </div>
+      <div class="grid grid-3" id="workGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== 创业 ===== -->
+  <section class="section alt-mint" id="startup">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">09 / STARTUP</span>
+        <h2><span class="sticker-ico" data-sticker="spark" aria-hidden="true"></span>创业实录</h2>
+      </div>
+      <div class="su-top">
+        <article class="card su-info">
+          <h3 id="suName"></h3>
+          <p class="su-meta" id="suMeta"></p>
+          <p class="ph" id="suIntro"></p>
+        </article>
+        <ul class="su-stats" id="suStats"></ul>
+      </div>
+      <div class="su-groups" id="suGroups"></div>
+    </div>
+  </section>
+
+  <!-- ===== Agent Skill：可下载 + 可在线试用 ===== -->
+  <section class="section" id="skillpack">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">10 / SKILLS</span>
+        <h2><span class="sticker-ico" data-sticker="note" aria-hidden="true"></span>我做的 Agent Skill</h2>
+        <p class="sec-sub ph" id="skillsIntro"></p>
+      </div>
+      <div class="grid grid-3" id="skillGrid"></div>
+      <details class="skill-more" id="skillMore">
+        <summary>更多 Skill（6）</summary>
+        <div id="skillMoreList"></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== 生活碎片 ===== -->
+  <section class="section alt-mint" id="life">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">11 / OFF DUTY</span>
+        <h2><span class="sticker-ico" data-sticker="peach" aria-hidden="true"></span>下班以后的我</h2>
+        <p class="sec-sub ph" id="lifeIntro"></p>
+      </div>
+
+      <div class="life-top">
+        <div class="filters" id="lifeFilters"></div>
+        <div class="city-box">
+          <div class="city-row"><span class="city-label been">去过 ✈️</span><div class="chips" id="citiesBeen"></div></div>
+          <div class="city-row"><span class="city-label next">想去 📍</span><div class="chips" id="citiesNext"></div></div>
+        </div>
+      </div>
+
+      <div class="life-grid is-clamped" id="lifeGrid"></div>
+      <div class="life-more"><button class="btn btn-ghost small" id="lifeMore">展开全部照片 ↓</button></div>
+      <div class="paw-divider" aria-hidden="true">🐾</div>
+    </div>
+  </section>
+
+  <!-- ===== 联系 ===== -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-inner">
+      <div>
+        <span class="sec-num">12 / CONTACT</span>
+        <h2><span class="sticker-ico" data-sticker="smile" aria-hidden="true"></span>期待与您交流</h2>
+        <p class="lead light">期待产品、运营与市场方向的实习及校招机会，也欢迎交流 AI 工具在实际业务中的应用。</p>
+      </div>
+      <ul class="contact-list">
+        <li><span>邮箱</span><span class="masked">联系方式见简历</span></li>
+        <li><span>手机 / 微信</span><span class="masked">联系方式见简历</span></li>
+        <li><span>现居 / 求职城市</span><a href="#">北京 / 北京 · 上海 · 杭州 · 长沙 · 深圳</a></li>
+        <li><span>简历</span><a href="周旺-产品经理-简历.pdf" download>下载 PDF ↓</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 作品集全屏浏览层 -->
+  <div class="fullview" id="fullView" hidden>
+    <div class="fv-bar">
+      <div class="fv-title">
+        <span class="sticker-ico sm" data-sticker="spark" aria-hidden="true"></span>
+        <strong id="fvTitle">作品集</strong>
+        <span class="fv-count" id="fvCount"></span>
+      </div>
+      <div class="filters fv-filters" id="fvFilters"></div>
+      <button class="lb-close fv-close" id="fvClose" aria-label="关闭全屏">✕</button>
+    </div>
+    <div class="fv-body">
+      <div class="grid fv-grid" id="fvGrid"></div>
+      <p class="fv-hint">按 Esc 或点右上角 ✕ 退出全屏</p>
+    </div>
+  </div>
+
+  <!-- Skill 在线试用弹层 -->
+  <div class="modal" id="tryModal" hidden>
+    <div class="modal-card">
+      <button class="lb-close" id="tryClose" aria-label="关闭">✕</button>
+      <span class="sticker-ico modal-st" data-sticker="spark" aria-hidden="true"></span>
+      <h3 id="tryTitle"></h3>
+      <p class="ph" id="tryDesc"></p>
+      <ol class="try-steps">
+        <li>在下面输入内容，点「跑一下」看输出效果</li>
+        <li>觉得有用就复制安装命令，或直接下载文件包</li>
+        <li>放进自己的编辑器 / Agent 里就能用</li>
+      </ol>
+      <label class="try-label" for="tryInput" id="tryLabel"></label>
+      <textarea id="tryInput" rows="3"></textarea>
+      <div class="try-actions">
+        <button class="btn btn-primary small" id="tryRun">跑一下 ▶</button>
+        <button class="btn btn-ghost small" id="tryCopyCmd">复制安装命令</button>
+        <a class="btn btn-ghost small" id="tryDownload" download>下载文件包 ↓</a>
+      </div>
+      <pre class="try-out" id="tryOut">输出会显示在这里 · 本地模板演示，不联网、不调用模型</pre>
+    </div>
+  </div>
+
+  <!-- 图片放大层 -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" aria-label="关闭">✕</button>
+    <figure class="lb-inner">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+  </div>
+
+
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 周旺 Ivy</span>
+    <span id="eggHint">试试键盘输入 <code>ivy</code> 🎉</span>
+    <span>Made with <span class="heart">♥</span> HTML / CSS / JS</span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="works.js"></script>
+<script src="render.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
