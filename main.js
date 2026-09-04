@@ -99,7 +99,7 @@ function paintDeck() {
   const box = document.getElementById('drawnGrid');
   box.innerHTML = got
     ? drawn[deckKey].map(gcardHTML).join('')
-    : '<p class="empty-hint ph">扭蛋槽还是空的，左边那颗蛋等你 👈</p>';
+    : '<p class="empty-hint ph">扭蛋槽还是空的，点那颗蛋试试 🥚</p>';
   document.getElementById('progressFill').style.width = (got / total * 100) + '%';
   document.getElementById('progressTxt').textContent = `${got} / ${total}`;
   document.getElementById('deck').classList.toggle('is-empty', got === total);
@@ -349,7 +349,7 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(en => {
     if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.01 });
 
 function observeReveal() {
   document.querySelectorAll('.reveal:not(.is-in)').forEach(el => io.observe(el));

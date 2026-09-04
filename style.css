@@ -28,7 +28,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -939,7 +939,7 @@ h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -.02em; }
   transition: transform .22s, box-shadow .22s;
 }
 .trait.tall { align-self: flex-start; height: 340px; }
-.trait.short { align-self: flex-end; height: 286px; }
+.trait.short { align-self: flex-end; height: 312px; }
 .trait:hover .t-inner { transform: translate(-3px, -5px); }
 .trait.is-flipped:hover .t-inner { transform: rotateY(180deg) translate(3px, -5px); }
 .trait .t-num {
@@ -1030,6 +1030,11 @@ h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -.02em; }
   transition: width .2s linear;
 }
 .rail-hint { font-size: 12.5px; font-weight: 800; color: var(--ink-60); }
+.rail-hint .hint-mb { display: none; }
+@media (hover: none), (max-width: 640px) {
+  .rail-hint .hint-pc { display: none; }
+  .rail-hint .hint-mb { display: inline; }
+}
 
 /* ===== 作品集全屏浏览层 ===== */
 .fullview {
@@ -1372,6 +1377,70 @@ h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -.02em; }
   .contact-list { transform: none; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   :root { --hard: 4px 4px 0 var(--ink); }
+}
+
+/* ===== 手机端细节修正（≤640 / ≤560 / ≤400）===== */
+@media (max-width: 640px) {
+  /* 跑马灯放大 4% 会横向溢出，手机上取消放大 */
+  .marquee { transform: rotate(-1.2deg); margin: 24px 0 36px; }
+  .marquee-track span { font-size: 14.5px; gap: 16px; padding-right: 16px; }
+
+  /* 特质卡片：手机上内容会被裁掉，这里加宽加高并缩小字号 */
+  .trait { width: min(300px, 84vw); }
+  .trait.tall { height: 404px; }
+  .trait.short { height: 360px; }
+  .t-face { padding: 22px 20px 20px; }
+  .trait h3 { font-size: 18px; margin-bottom: 8px; }
+  .trait .t-line { font-size: 14px; }
+  .trait .t-proof { font-size: 12.5px; padding-top: 12px; line-height: 1.55; }
+  .trait .t-num { font-size: 28px; top: 14px; right: 18px; }
+  .trait .t-st { width: 36px; margin-bottom: 12px; }
+  .trait .t-flip-hint { font-size: 11px; margin-top: 10px; }
+
+  /* 「CLASS OF 2026」贴纸别贴到屏幕外 */
+  .sticker.s3 { top: -14px; right: 4px; font-size: 11px; padding: 6px 11px; }
+  .sticker.s1 { width: 78px; height: 78px; font-size: 12.5px; top: -16px; right: -6px; }
+}
+
+@media (max-width: 560px) {
+  /* 证书墙：两列时名称折行太多，手机上改成「缩略图在左 + 文字在右」单列 */
+  .cert-grid { grid-template-columns: 1fr; gap: 10px; }
+  .cert { display: grid; grid-template-columns: 104px 1fr; align-items: stretch; }
+  .cert .thumb {
+    aspect-ratio: auto; padding: 6px; font-size: 22px;
+    border-bottom: 0; border-right: var(--bd);
+  }
+  .cert .cert-meta {
+    display: flex; flex-direction: column; justify-content: center; gap: 3px; padding: 10px 12px;
+  }
+  .cert .cert-meta strong { font-size: 13px; line-height: 1.45; }
+  .cert-wall.is-clamped { max-height: 620px; }
+  .cert:hover { transform: none; }
+}
+
+@media (max-width: 640px) {
+  /* 手机没有实体键盘，隐藏键盘彩蛋提示 */
+  #eggHint { display: none; }
+}
+
+@media (max-width: 400px) {
+  .wrap { padding: 0 16px; }
+  .section { padding: 46px 0; }
+  .sec-head { margin-bottom: 30px; }
+  .sec-head h2 { font-size: 25px; }
+  .sec-sub { font-size: 14px; }
+  .hero h1 { font-size: 29px; }
+  .lead { font-size: 14.5px; margin-top: 18px; }
+  .card { padding: 20px 18px; }
+  .card h3 { font-size: 17px; }
+  .card p { font-size: 14px; }
+  .sub-title { font-size: 17px; margin: 34px 0 14px; }
+  .nav-links { left: 16px; right: 16px; }
+  .work-body { padding: 18px 16px 20px; }
+  .work-metrics { gap: 6px; }
+  .work-metrics div { padding: 7px 6px; }
+  .work-metrics div strong { font-size: 15px; }
+  .su-item figcaption, .life-item .l-cap { font-size: 11.5px; }
 }
 
 /* ===== 打印：可直接导出 PDF 简历 ===== */
